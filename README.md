@@ -13,3 +13,9 @@ $ vim
 
 # slackワークスペース移行
 https://slack.com/signin/find
+
+# iTerm
+'JellyBeans'
+'Tomorrow night'
+のどっちか
+https://github.com/mbadolato/iTerm2-Color-Schemes
