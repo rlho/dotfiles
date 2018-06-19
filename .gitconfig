@@ -1,0 +1,16 @@
+[alias]
+	co = checkout
+  gv = "!f(){ git grep -n $* | peco | awk -F: '{print $1}' | xargs -I% bash -c 'vim "%" <&- <&2'; };f"
+[user]
+  name = riho.takagi
+  email = rihohearts@gmail.com
+[core]
+  excludesfile = /Users/riho.takagi/.gitignore
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+[push]
+	default = simple
+[ghp]
+  root = ~/ghp/
