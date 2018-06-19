@@ -1,11 +1,10 @@
 [alias]
-	co = checkout
+  co = checkout
+  # git grepした後のファイルをvimで開く
   gv = "!f(){ git grep -n $* | peco | awk -F: '{print $1}' | xargs -I% bash -c 'vim "%" <&- <&2'; };f"
 [user]
   name = riho.takagi
   email = rihohearts@gmail.com
-[core]
-  excludesfile = /Users/riho.takagi/.gitignore
 [pager]
   log = diff-highlight | less
   show = diff-highlight | less
