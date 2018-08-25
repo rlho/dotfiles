@@ -15,3 +15,5 @@
   root = ~/ghp/
 [fetch]
   fetch = +refs/heads/*:refs/remotes/origin/*
+[core]
+	editor = vim

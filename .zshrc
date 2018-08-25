@@ -72,9 +72,3 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
-
-# === cool-peco init ===
-FPATH="$FPATH:/Users/riho.takagi/cool-peco"
-autoload -Uz cool-peco
-cool-peco
-# ======================
