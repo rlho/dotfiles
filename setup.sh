@@ -27,3 +27,10 @@ fi
 
 echo "\n"
 echo "== finish!! =="
+
+# cool-pecoのインストール
+CPDIR=~/
+cd $CPDIR
+git clone https://github.com/ryoppy/cool-peco.git
+cd cool-peco
+sh ./install.sh

@@ -13,3 +13,5 @@
 	default = simple
 [ghp]
   root = ~/ghp/
+[fetch]
+  fetch = +refs/heads/*:refs/remotes/origin/*

@@ -13,6 +13,7 @@ set wrapscan
 " オートインデント設定
 set tabstop=2
 set autoindent
+set smartindent
 set expandtab
 set shiftwidth=2
 " 個人設定"
