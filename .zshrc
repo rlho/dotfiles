@@ -7,6 +7,14 @@
 
 # alias
 alias cd=cdls
+alias gh='cd $(ghq root)/$(ghq list | peco)'
+alias br='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias ff=cool-peco-filename-search
+alias gbb=cool-peco-git-checkout
+
+#bind
+bindkey '^h' cool-peco-ssh
+bindkey '^g' cool-peco-ghq
 
 # Rails
 alias be="bundle exec"
@@ -14,6 +22,9 @@ alias be="bundle exec"
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
+# Go
+export GOPATH=$HOME/.go
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -43,9 +54,6 @@ alias gls="gls --color"
 
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# ghq
-alias gh='cd $(ghq root)/$(ghq list | peco)'
-alias b='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # 木曽さんのところからパクってきたやつ
 # cdすると同時にls
@@ -64,3 +72,9 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
+
+# === cool-peco init ===
+FPATH="$FPATH:/Users/riho.takagi/cool-peco"
+autoload -Uz cool-peco
+cool-peco
+# ======================
