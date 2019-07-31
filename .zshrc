@@ -8,9 +8,18 @@
 # alias
 alias cd=cdls
 alias gh='cd $(ghq root)/$(ghq list | peco)'
+alias gm='git pull origin master'
 alias br='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias g='git'
+alias b='bundle'
 alias ff=cool-peco-filename-search
 alias gbb=cool-peco-git-checkout
+
+# hub
+eval "$(hub alias -s)"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 #bind
 bindkey '^h' cool-peco-ssh
