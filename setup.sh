@@ -28,6 +28,14 @@ if [ $yn = "y" -o $yn = "Y" ]; then
     done
 fi
 
+# ghqのインストール
+read "yn?install ghq? y/n "
+if [ $yn = "y" -o $yn = "Y" ]; then
+  brew install ghq
+fi
+
+
+# pecoのインストール
 read "yn?install peco? y/n "
 if [ $yn = "y" -o $yn = "Y" ]; then
   brew install peco
