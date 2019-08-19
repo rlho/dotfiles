@@ -28,6 +28,11 @@ if [ $yn = "y" -o $yn = "Y" ]; then
     done
 fi
 
+read "yn?install peco? y/n "
+if [ $yn = "y" -o $yn = "Y" ]; then
+  brew install peco
+fi
+
 # cool-pecoのインストール
 read "yn?install cool-peco? y/n "
 if [ $yn = "y" -o $yn = "Y" ]; then
