@@ -11,6 +11,8 @@ alias gh='cd $(ghq root)/$(ghq list | peco)'
 alias br='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 alias ff=cool-peco-filename-search
 alias gbb=cool-peco-git-checkout
+# For git pre-commit
+alias sed='gsed'
 
 #bind
 bindkey '^h' cool-peco-ssh
@@ -25,6 +27,7 @@ eval "$(rbenv init - zsh)"
 
 # Go
 export GOPATH=$HOME/.go
+export PATH=$PATH:/$GO_PATH/bin
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -72,3 +75,26 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
+
+# === cool-peco init ===
+FPATH="$FPATH:/Users/takagiriho/cool-peco"
+autoload -Uz cool-peco
+cool-peco
+# ======================
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+# DB
+#mysql.server start
+
+# direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
+export PATH="/usr/local/opt/php@7.4/bin:$PATH"
+export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
+
+#. /usr/local/opt/asdf/libexec/asdf.sh
+# node
+#export NODE_OPTIONS=--openssl-legacy-provide
+unset NODE_OPTIONS
