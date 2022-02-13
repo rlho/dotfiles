@@ -6,9 +6,9 @@
   name = riho.takagi
   email = rihohearts@gmail.com
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  log = less
+  show = less
+  diff = less
 [push]
 	default = simple
 [ghp]
@@ -17,3 +17,5 @@
   fetch = +refs/heads/*:refs/remotes/origin/*
 [core]
 	editor = vim
+[init]
+	templatedir = ~/.git_template
