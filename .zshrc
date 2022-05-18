@@ -98,3 +98,4 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 # node
 #export NODE_OPTIONS=--openssl-legacy-provide
 unset NODE_OPTIONS
+export PATH="$HOME/.embulk/bin:$PATH"
