@@ -99,3 +99,37 @@ export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
 #export NODE_OPTIONS=--openssl-legacy-provide
 unset NODE_OPTIONS
 export PATH="$HOME/.embulk/bin:$PATH"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+echo '. $HOME/.ghcup/env'
+
+[ -f "/Users/riho/.ghcup/env" ] && source "/Users/riho/.ghcup/env" # ghcup-env
+
+# python
+export PATH="$HOME/Library/Python/3.7/lib/python/site-packages:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/riho/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/riho/Desktop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/riho/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/riho/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/riho/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/riho/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/riho/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/riho/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
